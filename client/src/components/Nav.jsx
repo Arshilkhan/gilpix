@@ -28,7 +28,7 @@ export default function Nav({ hasHero, menuOpen, onToggle }) {
   const solid = (!hasHero || st.past) && !menuOpen;
 
   return (
-    <nav className={`nav ${over ? 'over' : ''} ${solid ? 'solid' : ''} ${st.compact ? 'compact' : ''}`} style={{ zIndex: 80 }}>
+    <nav className={`nav ${over ? 'over' : ''} ${solid ? 'solid' : ''} ${st.compact ? 'compact' : ''}`} style={{ zIndex: menuOpen ? 60 : 80 }}>
       <div className="nav-in">
         <Link className="brand" to="/" aria-label="GILPIX home">GILPIX</Link>
         <div className="nav-links">
