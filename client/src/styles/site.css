@@ -462,3 +462,16 @@ body.menu-open{overflow:hidden}
   }
 }
 
+
+/* Ensure the open dropdown sits above the navbar */
+@media (max-width: 860px) {
+  body.menu-open .nav {
+    z-index: 60 !important;
+  }
+
+  body.menu-open .sheet {
+    z-index: 100 !important;
+    background: var(--ivory);
+    isolation: isolate;
+  }
+}
