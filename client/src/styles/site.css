@@ -399,3 +399,35 @@ html,body{overflow-x:clip;max-width:100%}
 
 /* Lock the page behind the open menu */
 body.menu-open{overflow:hidden}
+
+
+/* Keep the mobile menu header visually connected to the dropdown */
+@media (max-width: 860px) {
+  .nav.menu-open,
+  body.menu-open .nav {
+    background: var(--ivory);
+    color: var(--ink);
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  body.menu-open .nav .brand {
+    color: var(--ink);
+  }
+
+  body.menu-open .nav .burger {
+    color: var(--ink);
+  }
+
+  body.menu-open .sheet {
+    top: 76px;
+    background: var(--ivory);
+    border-top: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  body.menu-open .sheet {
+    top: 68px;
+  }
+}
