@@ -1,0 +1,22 @@
+export const SERVICES = [
+  { n: '01', slug: 'photography', title: 'Wedding Photography',
+    short: 'Candid and traditional photography focused on genuine moments, emotions and people.',
+    long: 'Two to four photographers who move quietly through your day. We shoot documentary-first — the ceremony as it actually unfolds — and step in for portraits only where it matters, so you spend your wedding at your wedding.',
+    included: ['Full-day event coverage', 'Candid + traditional photography', 'Two to four photographers', 'Colour-graded edited gallery', 'Private online gallery', 'High-resolution downloads'],
+    from: 'From ₹1,20,000', photo: { seed: 101, pal: 'vermilion', kind: 'wide', r: '4/5', label: 'Ceremony coverage' } },
+  { n: '02', slug: 'films', title: 'Wedding Films',
+    short: 'Cinematic films that turn the atmosphere and emotions of your wedding into a story.',
+    long: "Sound is half of a wedding. We record the vows, the speeches, the dhol, your father's voice cracking — and cut it into a film you will watch on anniversaries.",
+    included: ['3–5 minute highlight film', 'Full ceremony film', 'Live audio of vows and speeches', 'Cinematic colour grade', 'Licensed music', 'Optional teaser within 72 hours'],
+    from: 'From ₹1,50,000', photo: { seed: 102, pal: 'dusk', kind: 'couple', r: '4/5', label: 'Film still' } },
+  { n: '03', slug: 'pre-wedding', title: 'Pre-Wedding',
+    short: 'Relaxed and creative couple sessions designed around your personalities.',
+    long: 'A half-day somewhere that means something to you — a city you met in, a house, a coastline. Mostly it is a rehearsal: by the wedding, being photographed already feels normal.',
+    included: ['3–4 hour session', 'One or two locations', 'Outfit and location guidance', '40–60 edited photographs', 'Short reel for Instagram', 'Travel within Maharashtra included'],
+    from: 'From ₹35,000', photo: { seed: 103, pal: 'sage', kind: 'couple', r: '4/5', label: 'Pre-wedding session' } },
+  { n: '04', slug: 'albums', title: 'Albums',
+    short: 'Beautifully curated physical albums designed to preserve your memories for years.',
+    long: 'We sequence the album like a story, not a contact sheet. Printed on archival fine-art paper, hand-bound in linen or leather, with two parent copies at half size.',
+    included: ['Designed by us, approved by you', 'Archival fine-art printing', 'Hand-bound linen or leather', '30–60 spreads', 'Two parent duplicate albums', 'Protective presentation box'],
+    from: 'From ₹28,000', photo: { seed: 104, pal: 'linen', kind: 'detail', r: '4/5', label: 'Album spread' } }
+];
