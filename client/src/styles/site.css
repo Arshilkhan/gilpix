@@ -401,9 +401,9 @@ html,body{overflow-x:clip;max-width:100%}
 body.menu-open{overflow:hidden}
 
 
-/* Keep the mobile menu header visually connected to the dropdown */
+
+/* Compact mobile menu — prevent header overlap and clipping */
 @media (max-width: 860px) {
-  .nav.menu-open,
   body.menu-open .nav {
     background: var(--ivory);
     color: var(--ink);
@@ -411,23 +411,54 @@ body.menu-open{overflow:hidden}
     backdrop-filter: none;
   }
 
-  body.menu-open .nav .brand {
-    color: var(--ink);
-  }
-
+  body.menu-open .nav .brand,
   body.menu-open .nav .burger {
     color: var(--ink);
   }
 
   body.menu-open .sheet {
-    top: 76px;
+    top: 66px;
+    left: 8px;
+    right: 8px;
+    bottom: auto;
+
+    max-height: calc(100dvh - 76px);
+    overflow-y: auto;
+
+    padding: 8px 18px 14px;
+    gap: 0;
     background: var(--ivory);
     border-top: 0;
+  }
+
+  body.menu-open .sheet a.m {
+    font-size: 22px;
+    line-height: 1.15;
+    padding: 5px 0;
+  }
+
+  body.menu-open .sheet .foot {
+    margin-top: 8px;
+    padding-top: 10px;
+    gap: 8px;
   }
 }
 
 @media (max-width: 560px) {
   body.menu-open .sheet {
-    top: 68px;
+    top: 66px;
+    max-height: calc(100dvh - 74px);
+    padding: 8px 16px 12px;
+  }
+
+  body.menu-open .sheet a.m {
+    font-size: 21px;
+    padding: 4px 0;
+  }
+
+  body.menu-open .sheet .foot {
+    margin-top: 6px;
+    padding-top: 8px;
   }
 }
+
