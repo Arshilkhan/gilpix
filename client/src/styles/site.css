@@ -187,7 +187,7 @@ body.menu-open .sheet{opacity:1;pointer-events:auto;transform:none}
 .film-stage::before{content:"";position:absolute;inset:0;z-index:2;background:rgba(12,10,9,.34);transition:background .7s var(--ease)}
 .film-stage:hover::before{background:rgba(12,10,9,.2)}
 .play{position:absolute;inset:0;z-index:3;display:grid;place-items:center}
-.play b{display:grid;place-items:center;width:clamp(72px,8vw,108px);aspect-ratio:1;border:1px solid rgba(255,255,255,.65);border-radius:50%;
+.play b{position:relative;display:grid;place-items:center;width:clamp(72px,8vw,108px);aspect-ratio:1;border:1px solid rgba(255,255,255,.65);border-radius:50%;
   color:#fff;transition:background .6s var(--ease),transform .6s var(--ease)}
 .film-stage:hover .play b{background:rgba(255,255,255,.14);transform:scale(1.06)}
 .play b::after{content:"";width:0;height:0;margin-left:5px;border-left:13px solid currentColor;border-top:9px solid transparent;border-bottom:9px solid transparent}
@@ -337,3 +337,9 @@ footer .brand{color:var(--onink)}
 .nav .brand{color:inherit}
 
 .state.dark .lede{color:var(--onink);opacity:.8}
+
+/* ---------- mobile safety nets ---------- */
+/* Never let the page pan sideways on phones (body-only overflow-x:hidden isn't enough on mobile). */
+html,body{overflow-x:clip;max-width:100%}
+/* On short screens the scroll cue collides with the hero buttons — drop it. */
+@media (max-height:620px){.scroll-ind{display:none}}
