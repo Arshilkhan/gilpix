@@ -1,0 +1,24 @@
+{
+  "name": "gilpix",
+  "version": "0.1.0",
+  "private": true,
+  "description": "GILPIX \u2014 wedding photography & films. React + Node/Express (static data draft).",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c gray,yellow \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "test": "npm test -w server",
+    "preview": "npm run build && npm run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module"
+}
